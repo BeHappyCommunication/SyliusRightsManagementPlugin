@@ -16,7 +16,7 @@ class ControllerListener implements ContainerAwareInterface
 {
     use ContainerAwareTrait;
 
-    public function onKernelController(FilterControllerEvent $event)
+    public function onKernelController(FilterControllerEvent $event): void
     {
         $request = $event->getRequest();
 
@@ -50,7 +50,7 @@ class ControllerListener implements ContainerAwareInterface
     /**
      * @return UserInterface|null
      */
-    protected function getUser()
+    protected function getUser(): ?UserInterface
     {
         if (!$this->container->has('security.token_storage')) {
             throw new \LogicException('The SecurityBundle is not registered in your application. Try running "composer require symfony/security-bundle".');
