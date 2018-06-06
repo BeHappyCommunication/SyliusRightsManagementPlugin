@@ -1,0 +1,18 @@
+BeHappy\SyliusRightsManagementPlugin\Entity\Group:
+    type: entity
+    table: bhc_right_group
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+            options:
+                unsigned: true
+    fields:
+        name:
+            type: string
+    oneToMany:
+        rights:
+            targetEntity: BeHappy\SyliusRightsManagementPlugin\Entity\Right
+            mappedBy: group
+            cascade: [ ALL ]

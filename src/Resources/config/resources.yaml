@@ -1,0 +1,18 @@
+sylius_resource:
+    resources:
+        be_happy_rights_management.group:
+            classes:
+                model: BeHappy\SyliusRightsManagementPlugin\Entity\Group
+                form: BeHappy\SyliusRightsManagementPlugin\Form\GroupType
+                controller: BeHappy\SyliusRightsManagementPlugin\Controller\GroupController
+        be_happy_rights_management.right:
+            classes:
+                model: BeHappy\SyliusRightsManagementPlugin\Entity\Right
+                form: BeHappy\SyliusRightsManagementPlugin\Form\RightType
+
+sylius_user:
+    resources:
+        admin:
+            user:
+                classes:
+                    model: BeHappy\SyliusRightsManagementPlugin\Entity\AdminUser

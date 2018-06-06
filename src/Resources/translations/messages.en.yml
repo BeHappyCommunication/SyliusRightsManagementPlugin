@@ -1,0 +1,6 @@
+be_happy_rights_management:
+    ui:
+        edit_group: 'Edit group'
+        new_group: 'Create group'
+        groups: 'Groups'
+        group: 'Group'

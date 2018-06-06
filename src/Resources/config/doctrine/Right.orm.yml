@@ -1,0 +1,19 @@
+BeHappy\SyliusRightsManagementPlugin\Entity\Right:
+    type: entity
+    table: bhc_right_right
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+            options:
+                unsigned: true
+    fields:
+        route:
+            type: string
+        granted:
+            type: boolean
+    manyToOne:
+        group:
+            targetEntity: BeHappy\SyliusRightsManagementPlugin\Entity\Group
+            inversedBy: rights

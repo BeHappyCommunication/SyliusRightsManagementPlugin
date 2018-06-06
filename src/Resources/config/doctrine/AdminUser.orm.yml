@@ -1,0 +1,8 @@
+BeHappy\SyliusRightsManagementPlugin\Entity\AdminUser:
+    type: entity
+    table: sylius_admin_user
+    manyToOne:
+        group:
+            targetEntity: BeHappy\SyliusRightsManagementPlugin\Entity\Group
+            joinColumn:
+                name: bhc_right_group

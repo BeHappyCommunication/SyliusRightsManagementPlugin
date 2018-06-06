@@ -1,0 +1,19 @@
+sylius_grid:
+    grids:
+        be_happy_rights_management_group:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: BeHappy\SyliusRightsManagementPlugin\Entity\Group
+            fields:
+                name:
+                    type: string
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete

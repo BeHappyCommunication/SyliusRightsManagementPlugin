@@ -1,0 +1,9 @@
+be_happy_rights_management_group_crud_paths:
+    resource: |
+        alias: be_happy_rights_management.group
+        except: [ 'show' ]
+        section: admin
+        templates: BeHappySyliusRightsManagementPlugin:Admin/Group
+        grid: be_happy_rights_management_group
+    type: sylius.resource
+    prefix: /admin

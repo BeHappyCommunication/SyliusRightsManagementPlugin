@@ -1,0 +1,40 @@
+services:
+    # Menu builder
+    be_happy.rights_management.listener.admin.menu_builder:
+        class: BeHappy\SyliusRightsManagementPlugin\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+
+    # Custom entities.
+    be_happy.rights_management.form.group:
+        class: BeHappy\SyliusRightsManagementPlugin\Form\GroupType
+        tags:
+            - { name: form.type }
+        arguments: ['%be_happy_rights_management.model.group.class%', ['sylius']]
+
+    be_happy.rights_management.form.right:
+        class: BeHappy\SyliusRightsManagementPlugin\Form\RightType
+        tags:
+            - { name: form.type }
+        calls:
+            - { method: setContainer, arguments: [ '@service_container' ] }
+        arguments: ['%be_happy_rights_management.model.right.class%', ['sylius']]
+
+    # Form extension
+    be_happy.rights_management.form.admin_user:
+        class: BeHappy\SyliusRightsManagementPlugin\Form\Extension\AdminUserTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Sylius\Bundle\CoreBundle\Form\Type\User\AdminUserType }
+
+    # Group service
+    be_happy.rights_management.service.group:
+        class: BeHappy\SyliusRightsManagementPlugin\Service\GroupService
+        calls:
+            - { method: setContainer, arguments: [ '@service_container' ] }
+
+    be_happy.rights_management.listener.request:
+        class: BeHappy\SyliusRightsManagementPlugin\Event\ControllerListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller }
+        calls:
+            - { method: setContainer, arguments: [ '@service_container' ] }
