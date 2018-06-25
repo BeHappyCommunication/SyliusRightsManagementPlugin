@@ -1,5 +1,5 @@
 BeHappy\SyliusRightsManagementPlugin\Entity\Right:
-    type: entity
+    type: mappedSuperclass
     table: bhc_right_right
     id:
         id:
