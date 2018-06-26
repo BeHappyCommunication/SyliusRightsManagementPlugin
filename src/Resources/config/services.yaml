@@ -29,6 +29,7 @@ services:
     # Group service
     be_happy.rights_management.service.group:
         class: BeHappy\SyliusRightsManagementPlugin\Service\GroupService
+        public: true
         calls:
             - { method: setContainer, arguments: [ '@service_container' ] }
 
