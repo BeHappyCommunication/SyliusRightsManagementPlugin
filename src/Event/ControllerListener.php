@@ -23,6 +23,11 @@ class ControllerListener implements ContainerAwareInterface
         $route = $request->attributes->get('_route');
         $controller = $event->getController();
 
+        // Prevent app from crashing when $controller is not an array.
+        if (!is_array($controller)) {
+            return;
+        }
+        
         // If we are in a controller.
         if ($controller[0] instanceof Controller) {
             $user = $this->getUser();
