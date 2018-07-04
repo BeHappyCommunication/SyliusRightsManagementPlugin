@@ -2,16 +2,4 @@ imports:
     - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/services.yaml' }
     - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/resources.yaml' }
     - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/grids.yaml' }
-
-be_happy_sylius_rights_management:
-    rights:
-        product:
-            list:
-                name: 'be_happy_rights_management.rights.product.read'
-                route: 'sylius_admin_product_index'
-            update:
-                name: 'be_happy_rights_management.rights.product.update'
-                route: 'sylius_admin_product_update'
-            delete:
-                name: 'be_happy_rights_management.rights.product.delete'
-                route: 'sylius_admin_product_delete'
+    - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management.yaml' }
