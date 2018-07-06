@@ -1,5 +1,6 @@
 be_happy_rights_management:
     ui:
+        rights_management: 'Управление правами'
         edit_group: 'Редактировать группу'
         new_group: 'Создать группу'
         groups: 'Группы'

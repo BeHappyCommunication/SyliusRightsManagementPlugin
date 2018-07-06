@@ -14,10 +14,10 @@ class AdminMenuListener
         $menu = $event->getMenu();
 
         $subMenu = $menu->addChild('be_happy.rights_management')
-            ->setLabel('Gestion des droits');
+            ->setLabel('be_happy_rights_management.ui.rights_management');
 
         $subMenu->addChild('be_happy.rights_management.groups', [
             'route' => 'be_happy_rights_management_admin_group_index'
-        ])->setLabel('Groupe(s)');
+        ])->setLabel('be_happy_rights_management.ui.groups');
     }
 }
