@@ -5,3 +5,6 @@ be_happy_rights_management:
         new_group: 'Создать группу'
         groups: 'Группы'
         group: 'Группа'
+        name: 'Имя'
+        rights: 'Права'
+        granted: 'Предоставлено'

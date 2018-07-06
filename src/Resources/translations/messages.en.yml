@@ -5,3 +5,6 @@ be_happy_rights_management:
         new_group: 'Create group'
         groups: 'Groups'
         group: 'Group'
+        name: 'Name'
+        rights: 'Rights'
+        granted: 'Granted'
