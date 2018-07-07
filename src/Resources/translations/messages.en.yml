@@ -1,6 +1,10 @@
 be_happy_rights_management:
     ui:
+        rights_management: 'Rights management'
         edit_group: 'Edit group'
         new_group: 'Create group'
         groups: 'Groups'
         group: 'Group'
+        name: 'Name'
+        rights: 'Rights'
+        granted: 'Granted'

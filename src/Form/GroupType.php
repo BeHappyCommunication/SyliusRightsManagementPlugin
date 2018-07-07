@@ -15,8 +15,11 @@ class GroupType extends AbstractResourceType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name', TextType::class)
+            ->add('name', TextType::class, [
+                'label' => 'be_happy_rights_management.ui.name'
+            ])
             ->add('rights', CollectionType::class, [
+                'label' => 'be_happy_rights_management.ui.rights',
                 'entry_type' => RightType::class
             ])
         ;
