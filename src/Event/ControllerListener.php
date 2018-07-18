@@ -9,8 +9,6 @@ use BeHappy\SyliusRightsManagementPlugin\Entity\Group;
 use BeHappy\SyliusRightsManagementPlugin\Service\GroupServiceInterface;
 use Sylius\Component\User\Model\UserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
@@ -22,9 +20,8 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
  *
  * @package BeHappy\SyliusRightsManagementPlugin\Event
  */
-class ControllerListener implements ContainerAwareInterface
+class ControllerListener
 {
-    use ContainerAwareTrait;
     
     /** @var array|null */
     protected $arrayRouter;
@@ -86,7 +83,7 @@ class ControllerListener implements ContainerAwareInterface
      */
     protected function redirectUser(string $route, string $message, FilterControllerEvent $event): void
     {
-        $this->container->get('session')->getFlashBag()->add('error', $message);
+        $this->session->getFlashBag()->add('error', $message);
         $event->setController(function() use ($route) {
             return new RedirectResponse($route);
         });
