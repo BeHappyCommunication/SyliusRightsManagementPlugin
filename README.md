@@ -62,12 +62,18 @@ Example:
 be_happy_sylius_rights_management:
     rights:
         product:
+            all:
+                name: 'be_happy_rights_management.rights.product.all'
+                routes: ['sylius_admin_product_*']
+                exclude: ['sylius_admin_product_review_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+        customer:
             list:
-                name: 'be_happy_rights_management.rights.product.read'
-                route: 'sylius_admin_product_index'
-            update:
-                name: 'be_happy_rights_management.rights.product.update'
-                route: 'sylius_admin_product_update'
+                name: 'be_happy_rights_management.rights.customer.list'
+                routes: ['sylius_admin_customer_index']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
 ```
 Architecture is:
 ```yaml
@@ -77,8 +83,14 @@ be_happy_sylius_rights_management:
             <action>:
                 name: 'Feel free to set what you want. This string is translated by Symfony.'
                 route: 'The name of the route in the routing.yml.'
+                routes: 'An array of routes. This syntax is preferred to "route"'
+                exclude: 'An array of excluded routes (useful if you define routes with a *).'
+                redirect_to: 'The route to redirect if not granted.'
+                redirect_message: 'A message if not granted.'
 ```
 Family and Action can be set to what you want, they are only used to get a nice and beautiful architecture.
+
+The syntax with an "\*" is allowed, making the firewall to take everything starting by the given string. The "\*" is only allowed at the end of a string.
 
 # Caution
 
