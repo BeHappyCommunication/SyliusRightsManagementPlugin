@@ -8,3 +8,53 @@ be_happy_rights_management:
         name: 'Name'
         rights: 'Rights'
         granted: 'Granted'
+
+    rights:
+        taxon:
+            all: 'Taxonomy management'
+        product:
+            all: 'Products management'
+        inventory:
+            all: 'Stock management'
+        product_attribute:
+            all: 'Attributes management'
+        product_option:
+            all: 'Options management'
+        product_association_type:
+            all: "Association types management"
+        channel:
+            all: 'Channels management'
+        country:
+            all: 'Country management'
+        zone:
+            all: 'Zones management'
+        currency:
+            all: 'Currencies management'
+        exchange_rate:
+            all: 'Change rates management'
+        locale:
+            all: 'Locales management'
+        payment_method:
+            all: 'Payment methods management'
+        shipping_method:
+            all: 'Delivery methods management'
+        shipping_category:
+            all: "Shipping categories management"
+        tax_category:
+            all: 'Tax categories management'
+        tax_rate:
+            all: 'Taxation management'
+        admin_user:
+            all: 'Administrators management'
+        customer:
+            all: 'Customers management'
+        customer_group:
+            all: 'Customers groups management'
+        promotion:
+            all: 'Promotion management'
+        product_review:
+            all: 'Reviews management'
+        order:
+            all: 'OrderManagement'
+        admin_group:
+            all: 'Right management'

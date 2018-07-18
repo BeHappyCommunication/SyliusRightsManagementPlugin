@@ -5,3 +5,53 @@ be_happy_rights_management:
         new_group: 'Créer un groupe'
         groups: 'Groupes'
         group: 'Groupe'
+
+    rights:
+        taxon:
+            all: 'Gestion des taxons'
+        product:
+            all: 'Gestion des produits'
+        inventory:
+            all: 'Gestion des stock'
+        product_attribute:
+            all: 'Gestion des attributs'
+        product_option:
+            all: 'Gestion des options'
+        product_association_type:
+            all: "Gestion des types d'associations"
+        channel:
+            all: 'Gestion des canaux'
+        country:
+            all: 'Gestion des pays'
+        zone:
+            all: 'Gestion des zones'
+        currency:
+            all: 'Gestion des devises'
+        exchange_rate:
+            all: 'Gestion des taux de change'
+        locale:
+            all: 'Gestion des locales'
+        payment_method:
+            all: 'Gestion des moyens de paiement'
+        shipping_method:
+            all: 'Gestion des modes de livraison'
+        shipping_category:
+            all: "Gestion des catégories d'expédition"
+        tax_category:
+            all: 'Gestion des catégories de taxe'
+        tax_rate:
+            all: 'Gestion des taux de taxe'
+        admin_user:
+            all: 'Gestion des administrateurs'
+        customer:
+            all: 'Gestion des clients'
+        customer_group:
+            all: 'Gestion des groupes'
+        promotion:
+            all: 'Gestion des promotions'
+        product_review:
+            all: 'Gestion des avis produit'
+        order:
+            all: 'Gestion des commandes'
+        admin_group:
+            all: 'Gestion des droits'

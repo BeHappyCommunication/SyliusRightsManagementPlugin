@@ -1,0 +1,15 @@
+be_happy_sylius_rights_management:
+    rights:
+        promotion:
+            all:
+                name: 'be_happy_rights_management.rights.promotion.all'
+                routes: ['sylius_admin_promotion_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        product_review:
+            all:
+                name: 'be_happy_rights_management.rights.product_review.all'
+                routes: ['sylius_admin_product_review_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"

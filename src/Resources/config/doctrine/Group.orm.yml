@@ -11,6 +11,8 @@ BeHappy\SyliusRightsManagementPlugin\Entity\Group:
     fields:
         name:
             type: string
+        code:
+            type: string
     oneToMany:
         rights:
             targetEntity: BeHappy\SyliusRightsManagementPlugin\Entity\Right

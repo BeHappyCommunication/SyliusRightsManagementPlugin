@@ -1,0 +1,91 @@
+be_happy_sylius_rights_management:
+    rights:
+        channel:
+            all:
+                name: 'be_happy_rights_management.rights.channel.all'
+                routes: ['sylius_admin_channel_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        country:
+            all:
+                name: 'be_happy_rights_management.rights.country.all'
+                routes: ['sylius_admin_country_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+        zone:
+            all:
+                name: 'be_happy_rights_management.rights.zone.all'
+                routes: ['sylius_admin_zone_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        currency:
+            all:
+                name: 'be_happy_rights_management.rights.currency.all'
+                routes: ['sylius_admin_currency_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        exchange_rate:
+            all:
+                name: 'be_happy_rights_management.rights.exchange_rate.all'
+                routes: ['sylius_admin_exchange_rate_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        locale:
+            all:
+                name: 'be_happy_rights_management.rights.locale.all'
+                routes: ['sylius_admin_locale_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        payment_method:
+            all:
+                name: 'be_happy_rights_management.rights.payment_method.all'
+                routes: ['sylius_admin_payment_method_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        shipping_method:
+            all:
+                name: 'be_happy_rights_management.rights.shipping_method.all'
+                routes: ['sylius_admin_shipping_method_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        shipping_category:
+            all:
+                name: 'be_happy_rights_management.rights.shipping_category.all'
+                routes: ['sylius_admin_shipping_category_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        tax_category:
+            all:
+                name: 'be_happy_rights_management.rights.tax_category.all'
+                routes: ['sylius_admin_tax_category_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        tax_rate:
+            all:
+                name: 'be_happy_rights_management.rights.tax_rate.all'
+                routes: ['sylius_admin_tax_rate_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        user:
+            all:
+                name: 'be_happy_rights_management.rights.admin_user.all'
+                routes: ['sylius_admin_admin_user_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        company_data:
+            all:
+                name: 'be_happy_rights_management.rights.company_data.all'
+                routes: ['sylius_admin_company_data_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"

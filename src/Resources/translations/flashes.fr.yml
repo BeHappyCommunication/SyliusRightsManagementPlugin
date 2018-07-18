@@ -1,0 +1,3 @@
+be_happy_rights_management:
+    message:
+        access_denied: "Accès refusé"

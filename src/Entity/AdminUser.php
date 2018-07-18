@@ -1,26 +1,33 @@
 <?php
 
+declare(strict_types=1);
+
 namespace BeHappy\SyliusRightsManagementPlugin\Entity;
 
 use Sylius\Component\Core\Model\AdminUser as BaseAdminUser;
 
+/**
+ * Class AdminUser
+ *
+ * @package BeHappy\SyliusRightsManagementPlugin\Entity
+ */
 class AdminUser extends BaseAdminUser implements AdminUserInterface
 {
-    /** @var Group|null */
+    /** @var GroupInterface|null */
     protected $group = null;
 
     /**
-     * @return Group|null
+     * @return GroupInterface|null
      */
-    public function getGroup(): ?Group
+    public function getGroup(): ?GroupInterface
     {
         return $this->group;
     }
 
     /**
-     * @param Group|null $group
+     * @param GroupInterface|null $group
      */
-    public function setGroup(?Group $group): void
+    public function setGroup(?GroupInterface $group): void
     {
         $this->group = $group;
     }

@@ -4,6 +4,8 @@ services:
         class: BeHappy\SyliusRightsManagementPlugin\Menu\AdminMenuListener
         tags:
             - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: removeAdminMenuItems, priority: -255 }
+        arguments: ['@be_happy.rights_management.service.group', '@security.token_storage']
 
     # Custom entities.
     be_happy.rights_management.form.group:
@@ -30,12 +32,19 @@ services:
     be_happy.rights_management.service.group:
         class: BeHappy\SyliusRightsManagementPlugin\Service\GroupService
         public: true
+        arguments:
+            - '%behappy.rights_management.rights%'
+            - '@router'
+            - '@be_happy_rights_management.repository.right'
         calls:
-            - { method: setContainer, arguments: [ '@service_container' ] }
+            - { method: initializeArrayRouter, arguments: [] }
 
     be_happy.rights_management.listener.request:
         class: BeHappy\SyliusRightsManagementPlugin\Event\ControllerListener
+        arguments:
+            - '@be_happy.rights_management.service.group'
+            - '@request_stack'
+            - '@session'
+            - '@security.token_storage'
         tags:
             - { name: kernel.event_listener, event: kernel.controller }
-        calls:
-            - { method: setContainer, arguments: [ '@service_container' ] }

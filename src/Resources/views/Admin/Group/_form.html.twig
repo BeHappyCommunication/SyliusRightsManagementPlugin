@@ -1,0 +1,14 @@
+{{ form_row(form.name) }}
+{{ form_row(form.code) }}
+<div class="ui four column stackable grid">
+    {% for right in form.rights %}
+        <div class="column">
+            <div class="ui segment">
+                <div class="title">
+                    {{ right.name.vars.value|trans }}
+                </div>
+                {{ form_row(right.granted) }}
+            </div>
+        </div>
+    {% endfor %}
+</div>

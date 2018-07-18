@@ -9,10 +9,20 @@ BeHappy\SyliusRightsManagementPlugin\Entity\Right:
             options:
                 unsigned: true
     fields:
-        route:
+        name:
             type: string
+        routes:
+            type: json_array
+        exclude:
+            type: json_array
         granted:
             type: boolean
+        redirectTo:
+            type: string
+            column: redirect_to
+        redirectMessage:
+            type: string
+            column: redirect_message
     manyToOne:
         group:
             targetEntity: BeHappy\SyliusRightsManagementPlugin\Entity\Group

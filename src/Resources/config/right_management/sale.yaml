@@ -1,0 +1,8 @@
+be_happy_sylius_rights_management:
+    rights:
+        order:
+            all:
+                name: 'be_happy_rights_management.rights.order.all'
+                routes: ['sylius_admin_order_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"

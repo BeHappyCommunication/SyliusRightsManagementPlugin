@@ -1,0 +1,23 @@
+be_happy_sylius_rights_management:
+    rights:
+        taxon:
+            all:
+                name: 'be_happy_rights_management.rights.taxon.all'
+                routes: ['sylius_admin_taxon_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        product:
+            all:
+                name: 'be_happy_rights_management.rights.product.all'
+                routes: ['sylius_admin_product_*']
+                exclude: ['sylius_admin_product_review_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
+
+        inventory:
+            all:
+                name: 'be_happy_rights_management.rights.inventory.all'
+                routes: ['sylius_admin_inventory_*']
+                redirect_to: sylius_admin_dashboard
+                redirect_message: "be_happy_rights_management.message.access_denied"
