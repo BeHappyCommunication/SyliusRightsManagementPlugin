@@ -21,6 +21,11 @@
             "role": "Developer",
             "homepage": "http://www.behappycom.com",
             "email": "s.decock@behappycom.com"
+        },
+        {
+            "name": "Maxime RAYOT",
+            "role": "Trainee developer",
+            "homepage": "http://www.behappycom.com"
         }
     ],
     "require": {
