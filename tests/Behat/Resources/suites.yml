@@ -1,10 +1,8 @@
-# Put your Behat suites definitions here
-
 default:
     suites:
-        greeting_customer:
+        ui_managing_groups:
             contexts_services:
-                - acme_sylius_example.context.ui.shop.welcome
-
-            filters:
-                tags: "@greeting_customer"
+                - sylius.behat.context.hook.doctrine_orm
+                - behappy_sylius_rights_management.context.ui.admin.managing_groups
+            filetrs:
+                tags: '@managing_groups && @ui'

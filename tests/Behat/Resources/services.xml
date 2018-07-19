@@ -4,13 +4,15 @@
     <services>
         <!-- Put your Behat services here -->
 
-        <service id="acme_sylius_example.context.ui.shop.welcome" class="Tests\Acme\SyliusExamplePlugin\Behat\Context\Ui\Shop\WelcomeContext">
-            <argument type="service" id="acme_sylius_example.page.shop.static_welcome" />
-            <argument type="service" id="acme_sylius_example.page.shop.dynamic_welcome" />
+        <service id="behappy_sylius_rights_management.context.ui.admin.managing_groups" class="BeHappy\SyliusRightsManagementPlugin\Behat\Context\Ui\Admin\ManagingGroupsContext">
+            <argument type="service" id="behappy_sylius_rights_management.page.admin.index" />
+            <argument type="service" id="behappy_sylius_rights_management.page.admin.create" />
+            <argument type="service" id="behappy_sylius_rights_management.page.admin.update" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="acme_sylius_example.page.shop.static_welcome" class="Tests\Acme\SyliusExamplePlugin\Behat\Page\Shop\StaticWelcomePage" parent="sylius.behat.symfony_page" public="false" />
-        <service id="acme_sylius_example.page.shop.dynamic_welcome" class="Tests\Acme\SyliusExamplePlugin\Behat\Page\Shop\DynamicWelcomePage" parent="sylius.behat.symfony_page" public="false" />
+        <service id="behappy_sylius_rights_management.page.admin.index" class="BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\IndexPage" parent="sylius.behat.page.admin.crud.index" public="false" />
+        <service id="behappy_sylius_rights_management.page.admin.create" class="BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\CreatePage" parent="sylius.behat.page.admin.crud.create" public="false" />
+        <service id="behappy_sylius_rights_management.page.admin.update" class="BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\UpdatePage" parent="sylius.behat.page.admin.crud.update" public="false" />
     </services>
 </container>
