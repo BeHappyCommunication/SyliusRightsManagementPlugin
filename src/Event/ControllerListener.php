@@ -60,6 +60,13 @@ class ControllerListener
         $route = $request->attributes->get('_route');
         $controller = $event->getController();
         $service = $this->groupService;
+        $syliusConfig = $request->attributes->get('_sylius');
+        if (!empty($syliusConfig['permission'])) {
+            $syliusPermission = $syliusConfig['permission'];
+            if (!empty($syliusPermission && $syliusPermission === true)) {
+                return;
+            }
+        }
 
         if ($controller[0] instanceof Controller) {
             $user = $this->getUser();

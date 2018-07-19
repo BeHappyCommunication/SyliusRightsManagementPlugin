@@ -19,8 +19,11 @@ class GroupService implements GroupServiceInterface
 {
     /** @var array|null */
     protected $arrayRouter;
+    /** @var array */
     protected $config = [];
+    /** @var RouterInterface */
     protected $router;
+    /** @var RepositoryInterface */
     protected $rightRepository;
     
     /**
