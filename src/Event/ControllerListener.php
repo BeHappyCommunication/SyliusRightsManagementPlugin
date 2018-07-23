@@ -67,6 +67,10 @@ class ControllerListener
                 return;
             }
         }
+        
+        if (!is_array($controller)) {
+            return;
+        }
 
         if ($controller[0] instanceof Controller) {
             $user = $this->getUser();
