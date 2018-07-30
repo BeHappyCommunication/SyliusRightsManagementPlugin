@@ -120,6 +120,9 @@ class GroupService implements GroupServiceInterface
         if (preg_match("/sylius_admin_partial_/", $route) || preg_match ("/sylius_admin_ajax_/", $route)) {
             return true;
         }
+        if (preg_match ("/sylius_shop_partial_/", $route)) {
+            return true;
+        }
         $right = $this->getRight($route, $user);
 
         if (!$right instanceof Right){
