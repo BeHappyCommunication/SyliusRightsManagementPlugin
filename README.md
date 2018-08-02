@@ -33,6 +33,7 @@ imports:
 ```yaml
 be_happy_rights_management:
     resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/routing.yaml'
+    prefix: /admin
 ```
 
 4. Update your database schema: 
