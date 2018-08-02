@@ -10,4 +10,3 @@ be_happy_rights_management_group_crud_paths:
                 templates:
                     form: BeHappySyliusRightsManagementPlugin:Admin/Group:_form.html.twig
     type: sylius.resource
-    prefix: /admin
