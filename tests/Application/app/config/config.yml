@@ -10,7 +10,7 @@ imports:
 
     - { resource: "../../../../vendor/sylius/sylius/app/config/security.yml" }
 
-    - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/resources.yaml' }
+    - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/app/config.yml' }
 
 framework:
     translator: { fallbacks: ["%locale%", "en"] }

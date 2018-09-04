@@ -10,7 +10,8 @@
   @ui
   Scenario: Adding group
     When I want to add a new group
-    And I choose "Administrators"
+    And I specify its name as "Administrators"
+    And I specify its code as "admin"
     Then I add it
     Then I should be notified that it has been successfully created
     And the group "Administrators" should appear in the store

@@ -40,15 +40,15 @@ class AdminMenuListener
     public function addAdminMenuItems(MenuBuilderEvent $event): void
     {
         $menu = $event->getMenu();
-
+        
         $subMenu = $menu->addChild('be_happy.rights_management')
             ->setLabel('be_happy_rights_management.ui.rights_management');
-
+        
         $subMenu->addChild('be_happy.rights_management.groups', [
             'route' => 'be_happy_rights_management_admin_group_index'
         ])->setLabel('be_happy_rights_management.ui.groups');
     }
-
+    
     /**
      * Removing all routes that user can not access
      *
@@ -59,7 +59,7 @@ class AdminMenuListener
         $menu = $event->getMenu();
         $categories = $menu->getChildren();
         $user = $this->tokenStorage->getToken()->getUser();
-
+        
         foreach ($categories as $category) {
             $items = $category->getChildren();
             foreach ($items as $item) {

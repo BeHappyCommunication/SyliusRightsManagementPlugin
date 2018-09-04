@@ -13,9 +13,18 @@ final class CreatePage extends BaseCreatePage implements CreatePageInterface
      *
      * @throws \Behat\Mink\Exception\ElementNotFoundException
      */
-    public function chooseName(string $name): void
+    public function specifyName(string $name): void
     {
-        $this->getDocument()->selectFieldOption('Name', $name);
+        $this->getDocument()->fillField('Name', $name);
+    }
+    /**
+     * @param string $code
+     *
+     * @throws \Behat\Mink\Exception\ElementNotFoundException
+     */
+    public function specifyCode(string $code): void
+    {
+        $this->getDocument()->fillField('Code', $code);
     }
     
     public function create(): void

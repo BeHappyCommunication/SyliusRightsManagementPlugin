@@ -2,11 +2,11 @@ default:
     suites:
         ui_managing_groups:
             contexts_services:
-                - sylius.behat.context.hook.doctrine_orm
-                - sylius.behat.context.transform.shared_storage
-                - sylius.behat.context.setup.admin_security
-                - sylius.behat.context.ui.admin.notification
+            - sylius.behat.context.hook.doctrine_orm
+            - sylius.behat.context.setup.admin_security
 
-                - behappy_sylius_rights_management.context.ui.admin.managing_groups
+            - sylius.behat.context.ui.admin.notification
+
+            - behappy_sylius_rights_management.context.ui.admin.managing_groups
             filetrs:
                 tags: '@managing_groups && @ui'

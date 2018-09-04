@@ -68,10 +68,6 @@ class ControllerListener
             }
         }
         
-        if (!is_array($controller)) {
-            return;
-        }
-
         if ($controller[0] instanceof Controller) {
             $user = $this->getUser();
             if ($user instanceof AdminUserInterface && $user->getGroup() instanceof Group) {
@@ -86,7 +82,7 @@ class ControllerListener
             }
         }
     }
-
+    
     /**
      * @param string                $route
      * @param string                $message
@@ -99,7 +95,7 @@ class ControllerListener
             return new RedirectResponse($route);
         });
     }
-
+    
     /**
      * @return UserInterface|null
      */
@@ -108,12 +104,12 @@ class ControllerListener
         if (null === $token = $this->tokenStorage->getToken()) {
             return null;
         }
-
+        
         if (!is_object($user = $token->getUser())) {
             // e.g. anonymous authentication
             return null;
         }
-
+        
         return $user;
     }
 }

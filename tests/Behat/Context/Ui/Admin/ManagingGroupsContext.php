@@ -7,7 +7,6 @@ namespace Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Context\Ui\Admin;
 use Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\CreatePageInterface;
 use Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\IndexPageInterface;
 use Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\UpdatePageInterface;
-use BeHappy\SyliusRightsManagementPlugin\Entity\GroupInterface;
 use Behat\Behat\Context\Context;
 use Webmozart\Assert\Assert;
 
@@ -45,13 +44,23 @@ final class ManagingGroupsContext implements Context
     }
     
     /**
-     * @When I choose :groupName
+     * @When I specify its name as :groupName
      *
      * @param string $groupName
      */
-    public function iChoose(string $groupName): void
+    public function iSpecifyItsNameAs(string $groupName): void
     {
-        $this->createPage->chooseName($groupName);
+        $this->createPage->specifyName($groupName);
+    }
+    
+    /**
+     * @When I specify its code as :code
+     *
+     * @param string $code
+     */
+    public function iSpecifyItsCodeAs(string $code): void
+    {
+        $this->createPage->specifyCode($code);
     }
     
     /**
@@ -65,19 +74,19 @@ final class ManagingGroupsContext implements Context
     }
     
     /**
-     * @Then /^the (group "([^"]+)") should appear in the store$/
+     * @Then the group :groupName should appear in the store
      *
-     * @param GroupInterface $group
+     * @param string $groupName
      *
      * @throws \Sylius\Behat\Page\UnexpectedPageException
      */
-    public function groupShouldAppearInTheStore(GroupInterface $group): void
+    public function groupShouldAppearInTheStore(string $groupName): void
     {
         $this->indexPage->open();
         
         Assert::true(
-            $this->indexPage->isSingleResourceOnPage(['code' => $group->getCode()]),
-            sprintf('Group %s should exist but it does not', $group->getCode())
+            $this->indexPage->isSingleResourceOnPage(['name' => $groupName]),
+            sprintf('Group %s should exist but it does not', $groupName)
         );
     }
 }

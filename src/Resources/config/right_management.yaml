@@ -1,9 +1,9 @@
 imports:
-    - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management/catalogue.yaml' }
-    - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management/customer.yaml' }
-    - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management/sale.yaml' }
-    - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management/marketing.yaml' }
-    - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management/configuration.yaml' }
+- { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management/catalogue.yaml' }
+- { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management/customer.yaml' }
+- { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management/sale.yaml' }
+- { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management/marketing.yaml' }
+- { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/right_management/configuration.yaml' }
 
 be_happy_sylius_rights_management:
     rights:
