@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace BeHappy\SyliusRightsManagementPlugin\Behat\Context\Ui\Admin;
+namespace Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Context\Ui\Admin;
 
-use BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\CreatePageInterface;
-use BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\IndexPageInterface;
-use BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\UpdatePageInterface;
+use Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\CreatePageInterface;
+use Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\IndexPageInterface;
+use Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\UpdatePageInterface;
 use BeHappy\SyliusRightsManagementPlugin\Entity\GroupInterface;
 use Behat\Behat\Context\Context;
 use Webmozart\Assert\Assert;

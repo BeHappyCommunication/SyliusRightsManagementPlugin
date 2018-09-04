@@ -12,5 +12,5 @@
     When I want to add a new group
     And I choose "Administrators"
     Then I add it
-    Then I should be notified it has been successfully created
+    Then I should be notified that it has been successfully created
     And the group "Administrators" should appear in the store

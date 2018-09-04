@@ -117,10 +117,13 @@ class GroupService implements GroupServiceInterface
         if (preg_match ("/sylius_admin_get_/", $route)) {
             return true;
         }
+        if (preg_match ("/sylius_admin_render_/", $route)) {
+            return true;
+        }
         if (preg_match("/sylius_admin_partial_/", $route) || preg_match ("/sylius_admin_ajax_/", $route)) {
             return true;
         }
-        if (preg_match ("/sylius_shop_partial_/", $route)) {
+        if (preg_match("/sylius_shop_partial_/", $route)) {
             return true;
         }
         $right = $this->getRight($route, $user);
@@ -128,7 +131,7 @@ class GroupService implements GroupServiceInterface
         if (!$right instanceof Right){
             return false;
         }
-//        behappy_company_data_plugin_admin_company_data_index
+        
         return $right->isGranted();
     }
 
