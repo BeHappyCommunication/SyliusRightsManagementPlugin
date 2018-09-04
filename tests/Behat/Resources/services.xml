@@ -4,21 +4,21 @@
     <services>
         <!-- Put your Behat services here -->
 
-        <service id="behappy_sylius_rights_management.context.ui.admin.managing_groups" class="Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Context\Ui\Admin\ManagingGroupsContext">
+        <service id="behappy_sylius_rights_management.context.ui.admin.managing_groups" class="Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Context\Ui\Admin\ManagingGroupsContext" public="true">
             <argument type="service" id="behappy_sylius_rights_management.page.admin.index" />
             <argument type="service" id="behappy_sylius_rights_management.page.admin.create" />
             <argument type="service" id="behappy_sylius_rights_management.page.admin.update" />
             <tag name="fob.context_service" />
         </service>
 
-        <service id="behappy_sylius_rights_management.page.admin.index" class="Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\IndexPage" parent="sylius.behat.page.admin.crud.index" public="false">
-                <argument>be_happy_rights_management_admin_group_index</argument>
+        <service id="behappy_sylius_rights_management.page.admin.index" class="Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\IndexPage" parent="sylius.behat.page.admin.crud.index">
+                <argument type="string">be_happy_rights_management_admin_group_index</argument>
         </service>
-        <service id="behappy_sylius_rights_management.page.admin.create" class="Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\CreatePage" parent="sylius.behat.page.admin.crud.create" public="false">
-                <argument>be_happy_rights_management_admin_group_create</argument>
+        <service id="behappy_sylius_rights_management.page.admin.create" class="Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\CreatePage" parent="sylius.behat.page.admin.crud.create">
+                <argument type="string">be_happy_rights_management_admin_group_create</argument>
         </service>
-        <service id="behappy_sylius_rights_management.page.admin.update" class="Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\UpdatePage" parent="sylius.behat.page.admin.crud.update" public="false">
-                <argument>be_happy_rights_management_admin_group_update</argument>
+        <service id="behappy_sylius_rights_management.page.admin.update" class="Tests\BeHappy\SyliusRightsManagementPlugin\Behat\Page\Admin\Group\UpdatePage" parent="sylius.behat.page.admin.crud.update">
+                <argument type="string">be_happy_rights_management_admin_group_update</argument>
         </service>
     </services>
 </container>
