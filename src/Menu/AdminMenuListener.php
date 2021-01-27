@@ -8,7 +8,7 @@ use BeHappy\SyliusRightsManagementPlugin\Entity\AdminUserInterface;
 use BeHappy\SyliusRightsManagementPlugin\Entity\GroupInterface;
 use BeHappy\SyliusRightsManagementPlugin\Service\GroupServiceInterface;
 use Sylius\Bundle\UiBundle\Menu\Event\MenuBuilderEvent;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\UsageTrackingTokenStorage;
 
 /**
  * Class AdminMenuListener

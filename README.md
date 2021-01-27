@@ -8,7 +8,7 @@ A rights management plugin for Sylius.
 $ composer require behappy/rights-management-plugin
 ```
 
-2. Enable the plugin in app/AppKernel.php:
+2. Enable the plugin in config/buncles.php:
 ```php
 public function registerBundles(): array
 {
@@ -22,14 +22,14 @@ public function registerBundles(): array
 ```
 
 
-2. Add the following import to config.yml:
+2. Add the following import to _sylius.yaml:
 ```yaml
 imports:
     # ...
     - { resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/app/config.yml' }
 ```
 
-3. Add the following route to routing.yml:
+3. Add the following route to routes.yaml:
 ```yaml
 be_happy_rights_management:
     resource: '@BeHappySyliusRightsManagementPlugin/Resources/config/routing.yaml'
@@ -53,7 +53,10 @@ $ php bin/console doctrine:schema:update --force
         {{ form_widget(form.group) }}
     </div>
     ```
-    
+6. Clear cache to load translation correctly 
+```bash
+$ php bin/console cache:clear
+``` 
 # Usage
 Group can only grant or deny access to listed routes.
 To list route, add to your config.yml.
